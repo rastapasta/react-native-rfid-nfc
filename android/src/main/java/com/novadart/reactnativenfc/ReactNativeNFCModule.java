@@ -259,13 +259,13 @@ public class ReactNativeNFCModule extends ReactContextBaseJavaModule
     private void processNdefMessages(String serialNumber, NdefMessage[] messages, boolean startupIntent){
         NdefProcessingTask task = new NdefProcessingTask(serialNumber, startupIntent);
         task.execute(messages);
-        stopForegroundDispatch(getActivity(), adapter);
+        // stopForegroundDispatch(getActivity(), adapter);
     }
 
     private void processTag(String serialNumber, Tag tag, boolean startupIntent){
         TagProcessingTask task = new TagProcessingTask(serialNumber, startupIntent);
         task.execute(tag);
-        stopForegroundDispatch(getActivity(), adapter);
+        // stopForegroundDispatch(getActivity(), adapter);
     }
 
     @Override
